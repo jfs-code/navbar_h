@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect  } from 'react';
 import "../navbar.css";
 
 export function Navbar() {
@@ -17,7 +17,19 @@ export function Navbar() {
             : setToggleIcon("nav__toggler");
     }
 
-    
+    const handleResize = () => {
+        if (window.innerWidth > 768) {
+            setActive('nav__menu');
+            setToggleIcon('nav__toggler');
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        }
+    }, []);
 
   return (
     <nav className='nav'>

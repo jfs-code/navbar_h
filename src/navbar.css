@@ -24,6 +24,17 @@ a{
     justify-content: space-around;
     height: 8vh;
     background: rgb(81, 88, 81);
+
+    width: 90%; /* Cambia el ancho del navbar al 85% */
+    margin: 0 auto; /* Centra el navbar */
+    border-radius: 50px; /* Bordes redondeados */
+    padding: 0 10px;
+
+    position: fixed; /* Posición fija */
+    top: 100px; /* Distancia desde el borde superior */
+    left: 50%; /* Centrado horizontal */
+    transform: translateX(-50%); /* Ajuste para el centrado */
+    z-index: 1000;
 }
 
 .nav__brand {
@@ -35,6 +46,7 @@ a{
     align-items: center;
     justify-content: space-around;
     gap: 3rem;
+    transition: transform 0.5s ease-in;
 }
 .nav__toggler div {
     width: 2.5rem;
