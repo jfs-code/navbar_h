@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap');
+
+:root {
+    --font-family: 'Segoe UI', sans-serif;
+    --nav-background-fondo: rgb(81, 88, 81); 
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    /*background: url('path/to/your/background-image.jpg') no-repeat center center fixed;  Imagen de fondo */
+     /*background-size: cover; Asegura que la imagen cubra toda la pantalla */
+    background-color: var(--nav-background-fondo);
+    font-family: var(--font-family);
+}

@@ -1,0 +1,137 @@
+:root {
+    --font-family: 'Segoe UI', sans-serif;
+    --nav-background: rgba(202, 147, 144, 0.9); /* Fondo semi-transparente */
+    /* --nav-background: rgb(202, 147, 144); */
+    --nav-border-color: rgb(242, 242, 242);
+    --nav-link-color: rgb(242, 242, 242);
+    --nav-link-color-after: rgb(81, 88, 81);
+    --nav-toggle-width: 2.5rem;
+    --nav-toggle-height: 0.2rem;
+    --nav-toggle-margin: 0.4rem;
+    --nav-hover-color: rgba(81, 88, 81, 0.8);
+    --nav-active-color: rgba(81, 88, 81, 1);
+}
+
+li{
+    list-style: none;
+}
+
+a{
+   text-decoration: none; 
+   color: var(--nav-link-color);
+   font-family: var(--font-family);
+   transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+   position: relative;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--nav-link-color-after);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+a:hover {
+    color: var(--nav-hover-color);
+}
+
+a:active {
+    transform: scale(0.95);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 8vh;
+    background: var(--nav-background);
+    width: 90%; 
+    margin: 0 auto; 
+    border: 1px solid var(--nav-border-color);
+    border-radius: 900px; 
+    padding: 0 10px;
+    position: fixed; 
+    /* top: 100px;  */
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 1000;
+}
+
+.nav__brand {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.nav__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3rem;
+    transition: transform 0.5s ease-in;
+}
+
+.nav__toggler div {
+    width: var(--nav-toggle-width);
+    height: var(--nav-toggle-height);
+    margin: var(--nav-toggle-margin);
+    background: var(--nav-link-color);
+    transition: 0.4s ease-in;
+}
+
+.nav__toggler {
+    cursor: pointer;
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .nav__toggler {
+        display: block;
+    }
+
+    .nav__menu {
+        position: fixed;
+        top: 7vh;
+        right: 0;
+        width: 50%;
+        height: 93vh;
+        background: var(--nav-background);
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: 0.5s ease-in;
+    }
+}
+
+/* Nav Active class */
+.nav__active {
+    transform: translateX(0);
+}
+
+/* Toggler Icon Animatiosn */
+.toggle .line1{
+    transform: rotate(-45deg) translate(-4px, 5px);
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-4px, -5px);
+}
+
+.nav__link.active {
+    color: var(--nav-active-color); /* Color del enlace activo */
+    font-weight: bold; /* Opcional: Negrita para el enlace activo */
+    /* Puedes añadir otros estilos como fondo, subrayado, etc. */
+}
