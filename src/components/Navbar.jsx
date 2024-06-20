@@ -23,11 +23,15 @@ export function Navbar({ brand, links }) {
         window.addEventListener('resize', handleResize);
         return () => {
             window.removeEventListener('resize', handleResize);
-        }
+        };
     }, []);
 
     const handleLinkClick = (index) => {
         setActiveLink(index); 
+        if (window.innerWidth <= 768) {
+            setActive('nav__menu'); 
+            setToggleIcon('nav__toggler'); 
+        }
     };
 
     return (

@@ -5,11 +5,11 @@
     --nav-border-color: rgb(242, 242, 242);
     --nav-link-color: rgb(242, 242, 242);
     --nav-link-color-after: rgb(81, 88, 81);
-    --nav-toggle-width: 2.5rem;
-    --nav-toggle-height: 0.2rem;
-    --nav-toggle-margin: 0.4rem;
     --nav-hover-color: rgba(81, 88, 81, 0.8);
     --nav-active-color: rgba(81, 88, 81, 1);
+    --nav-toggle-width: 2.5rem;
+    --nav-toggle-height: 0.2rem;
+    --nav-toggle-margin: 0.4rem;    
 }
 
 li{
@@ -66,6 +66,7 @@ a:active {
     left: 50%; 
     transform: translateX(-50%); 
     z-index: 1000;
+    font-family: var(--font-family);
 }
 
 .nav__brand {
@@ -101,23 +102,22 @@ a:active {
 
     .nav__menu {
         position: fixed;
-        top: 7vh;
+        top: 8vh;
         right: 0;
         width: 50%;
-        height: 93vh;
+        height: 92vh;
         background: var(--nav-background);
         flex-direction: column;
         transform: translateX(100%);
         transition: 0.5s ease-in;
+        z-index: 999;
+    }
+
+    .nav__menu.nav__active {
+        transform: translateX(0); 
     }
 }
 
-/* Nav Active class */
-.nav__active {
-    transform: translateX(0);
-}
-
-/* Toggler Icon Animatiosn */
 .toggle .line1{
     transform: rotate(-45deg) translate(-4px, 5px);
 }
@@ -131,7 +131,6 @@ a:active {
 }
 
 .nav__link.active {
-    color: var(--nav-active-color); /* Color del enlace activo */
-    font-weight: bold; /* Opcional: Negrita para el enlace activo */
-    /* Puedes añadir otros estilos como fondo, subrayado, etc. */
+    color: var(--nav-active-color);
+    font-weight: bold; 
 }

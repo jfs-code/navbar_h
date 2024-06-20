@@ -2,11 +2,11 @@ import React from "react";
 import { Navbar } from "./components/Navbar";
 
 const links = [
-  { text: 'Home', href: '#' },
-  { text: 'Jaime', href: '#' },
-  { text: 'About', href: '#' },
-  { text: 'Portfolio', href: '#' },
-  { text: 'Contact', href: '#' }
+  { text: "Home", href: "#" },
+  { text: "About", href: "#" },
+  { text: "Skills", href: "#" },
+  { text: "Portfolio", href: "#" },
+  { text: "Contact", href: "#" }
 ];
 
 export function App() {
