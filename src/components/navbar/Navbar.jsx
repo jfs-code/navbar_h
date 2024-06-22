@@ -1,6 +1,6 @@
 import React, { useState, useEffect  } from 'react';
 import PropTypes from 'prop-types';
-import "./navbar.css";
+import "./css/Navbar.css";
 
 export function Navbar({ brand, links }) {
     const [active, setActive] = useState('nav__menu');

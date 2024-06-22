@@ -1,16 +1,4 @@
-:root {
-    --font-family: 'Segoe UI', sans-serif;
-    --nav-background: rgba(202, 147, 144, 0.9); /* Fondo semi-transparente */
-    /* --nav-background: rgb(202, 147, 144); */
-    --nav-border-color: rgb(242, 242, 242);
-    --nav-link-color: rgb(242, 242, 242);
-    --nav-link-color-after: rgb(81, 88, 81);
-    --nav-hover-color: rgba(81, 88, 81, 0.8);
-    --nav-active-color: rgba(81, 88, 81, 1);
-    --nav-toggle-width: 2.5rem;
-    --nav-toggle-height: 0.2rem;
-    --nav-toggle-margin: 0.4rem;    
-}
+@import './../../Global.css';
 
 li{
     list-style: none;
@@ -18,7 +6,7 @@ li{
 
 a{
    text-decoration: none; 
-   color: var(--nav-link-color);
+   color: var(--light-gray);
    font-family: var(--font-family);
    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
    position: relative;
@@ -32,7 +20,7 @@ a::after {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: var(--nav-link-color-after);
+    background-color: var(--dark-Green);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
