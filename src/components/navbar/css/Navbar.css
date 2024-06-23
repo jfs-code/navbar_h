@@ -1,5 +1,39 @@
 @import './../../Global.css';
 
+.nav__brand-image {
+    height: 30px; 
+    width: auto;
+    pointer-events: none; 
+}
+
+.nav__brand a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav__brand a::after {
+    content: none;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 8vh;
+    background: var(--nav-background);
+    width: 90%; 
+    margin: 0 auto; 
+    border: 1px solid var(--nav-border-color);
+    border-radius: 900px; 
+    padding: 0 10px;
+    position: fixed; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 1000;
+    font-family: var(--font-family);
+}
+
 li{
     list-style: none;
 }
@@ -36,30 +70,6 @@ a:hover {
 
 a:active {
     transform: scale(0.95);
-}
-
-.nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 8vh;
-    background: var(--nav-background);
-    width: 90%; 
-    margin: 0 auto; 
-    border: 1px solid var(--nav-border-color);
-    border-radius: 900px; 
-    padding: 0 10px;
-    position: fixed; 
-    /* top: 100px;  */
-    left: 50%; 
-    transform: translateX(-50%); 
-    z-index: 1000;
-    font-family: var(--font-family);
-}
-
-.nav__brand {
-    text-transform: uppercase;
-    font-weight: bold;
 }
 
 .nav__menu {

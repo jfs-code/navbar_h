@@ -36,9 +36,11 @@ export function Navbar({ brand, links }) {
 
     return (
         <nav className='nav'>
-            <a href='#' className='nav__brand'>
-                {brand}
-            </a>
+            <div className='nav__brand'>
+                <a href='#'>
+                    <img src='/imgs/corona-blanco.svg' alt={brand} className='nav__brand-image' />
+                </a>
+            </div>
             <ul className={active}>
                 {links.map((link, index) => (
                     <li key={index} className='nav__item'>
