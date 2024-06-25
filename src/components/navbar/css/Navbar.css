@@ -40,7 +40,7 @@ li{
 
 a{
    text-decoration: none; 
-   color: var(--light-gray);
+   color: var(--pink);
    font-family: var(--font-family);
    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
    position: relative;
@@ -54,7 +54,7 @@ a::after {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: var(--dark-Green);
+    background-color: var(--light-gray);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
