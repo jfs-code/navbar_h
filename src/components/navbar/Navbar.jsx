@@ -35,33 +35,35 @@ export function Navbar({ brand, links }) {
     };
 
     return (
-        <nav className='nav'>
-            <div className='nav__brand'>
-                <a href='#'>
-                    <img src='/imgs/corona-pink.svg' alt={brand} className='nav__brand-image' />
-                </a>
-            </div>
-            <ul className={active}>
-                {links.map((link, index) => (
-                    <li key={index} className='nav__item'>
-                        <a
-                            href={link.href}
-                            className={`nav__link ${activeLink === index ? 'active' : ''}`}
-                            onClick={() => handleLinkClick(index)}
-                        >
-                            {link.text}
-                        </a>
-                    </li>
-                ))}            
-            </ul>
-            <div onClick={navToggle} className={toggleIcon}>
-                <div className="line1"></div>
-                <div className="line2"></div>
-                <div className="line3"></div>
-            </div>
+        <nav className='container-navbar'>
+            <div className='nav'>
+                <div className='nav__brand'>
+                    <a href='#'>
+                        <img src='/imgs/corona-pink.svg' alt={brand} className='nav__brand-image' />
+                    </a>
+                </div>
+                <ul className={active}>
+                    {links.map((link, index) => (
+                        <li key={index} className='nav__item'>
+                            <a
+                                href={link.href}
+                                className={`nav__link ${activeLink === index ? 'active' : ''}`}
+                                onClick={() => handleLinkClick(index)}
+                            >
+                                {link.text}
+                            </a>
+                        </li>
+                    ))}            
+                </ul>
+                <div onClick={navToggle} className={toggleIcon}>
+                    <div className="line1"></div>
+                    <div className="line2"></div>
+                    <div className="line3"></div>
+                </div>
+            </div>            
         </nav>
     );
-}
+};
 
 Navbar.propTypes = {
     brand: PropTypes.string.isRequired,
