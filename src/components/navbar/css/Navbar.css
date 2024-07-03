@@ -84,7 +84,7 @@ a:active {
     width: var(--nav-toggle-width);
     height: var(--nav-toggle-height);
     margin: var(--nav-toggle-margin);
-    background: var(--nav-link-color);
+    background: var(--pink);
     transition: 0.4s ease-in;
 }
 
